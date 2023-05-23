@@ -5,6 +5,8 @@ module com.example.chaty {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
 
+
+
     opens com.example.chaty to javafx.fxml;
     exports com.example.chaty;
 }

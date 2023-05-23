@@ -19,10 +19,10 @@
        <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="74.0" vgrow="SOMETIMES" />
      </rowConstraints>
       <children>
-         <TextArea prefHeight="218.0" prefWidth="215.0" />
-         <TextField GridPane.rowIndex="1" />
+         <TextArea fx:id="textArea" prefHeight="218.0" prefWidth="215.0" />
+         <TextField fx:id="textField" onAction="#send" GridPane.rowIndex="1" />
          <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
-         <Button fx:id="textField" mnemonicParsing="false" onAction="#onSendButtonClick" text="Send message" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Button mnemonicParsing="false" onAction="#send" text="Send message" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          <Button mnemonicParsing="false" text="Send file" GridPane.columnIndex="2" GridPane.rowIndex="1" />
       </children>
    </GridPane>

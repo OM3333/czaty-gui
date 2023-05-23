@@ -12,8 +12,18 @@ public class HelloController {
     @FXML
     private TextArea textArea;
 
-    @FXML
-    protected void onSendButtonClick() {
-        textArea.appendText(textField.getText());
+    private ConnectionThread connectionThread;
+
+    public HelloController(ConnectionThread connectionThread){
+        this.connectionThread = connectionThread;
     }
+
+    public void send(){
+        textArea.appendText(textField.getText()+"\n");
+        this.connectionThread.broadcast(textField.getText());
+        textField.clear();
+
+    }
+
+
 }
