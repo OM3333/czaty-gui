@@ -2,13 +2,18 @@ package com.example.chaty;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
 
 public class HelloController {
     @FXML
-    private Label welcomeText;
+    private TextField textField;
 
     @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    private TextArea textArea;
+
+    @FXML
+    protected void onSendButtonClick() {
+        textArea.appendText(textField.getText());
     }
 }
